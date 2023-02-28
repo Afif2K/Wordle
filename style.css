@@ -1,0 +1,237 @@
+:root {
+  --default: #121213;
+  --light: #ffffff;
+  --grey : #f2f2f2;
+  --dark: #000000;
+  --text: #000000;
+}
+body,
+html {
+border-top: 3px solid green;
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: var(--light);
+transition: background-color 0.3s ease-in-out;
+}
+body.dark,
+html.dark {
+border-top: 3px solid green;
+background-color: var(--dark);
+color:var(--light);
+border-top: 1px solid #32CD32;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: whitesmoke;
+  color:var(--default);
+  height: 7vh;
+  border-bottom: grey 0.5px solid; 
+  transition: background-color 0.3s ease-in-out;
+}
+.navbar .title {
+font-size: 50px;
+padding-left: 42%;
+font-weight: bold;
+justify-content: center;
+align-items: center;
+text-align: right;
+}
+.navbar .buttons {
+display: flex;
+justify-content: right
+}
+.navbar .buttons button {
+border: none;
+border-radius: 50%;
+font-size: 25px;
+font-weight: bold;
+margin: 0 10px;
+width: 50px;
+height: 50px;
+cursor: pointer;
+justify-content: right;
+transition: background-color 0.3s ease-in-out;
+}
+.dark-mode .i{
+color:white;
+}
+.navbar.dark{
+  background-color: var(--default);
+  color:var(--light);
+}
+
+.container{
+display: flex;
+flex-direction: row;
+}
+
+.congrats{
+display: flex;
+flex: 1;
+flex-direction: column;
+
+}
+.hint{
+display: none;
+flex: 1;
+flex-direction: column;
+border-left: black solid 1px;
+style:black;
+}
+.dark-mode .hint{
+display: none;
+flex: 1;
+flex-direction: column;
+border-left: black solid 1px;
+color:black;
+}
+.list {
+list-style: none;
+padding-left: 0;
+}
+.list li {
+margin: 10px 0;
+padding: 10px;
+}
+.dark-mode .list {
+list-style: none;
+padding-left: 0;
+color:white
+}
+.dark-mode .list li {
+margin: 10px 0;
+padding: 10px;
+color:white
+}
+.winnerGif {
+display: block;
+margin: 0 auto;
+padding-bottom: 10px;
+}
+
+.hidden {
+display: none;
+}
+
+#hint{
+display: block ;
+flex: 1;
+text-align: center;
+bottom: 0;
+background-color: yellow;
+width: 100%;
+color: black
+}
+#wrong{
+display: block ;
+flex: 1;
+text-align: center;
+bottom: 0;
+background-color: rgb(255, 77, 0);
+width: 100%;
+
+}
+.container_right{
+border-left: #5b5b5b;
+}
+.footnote {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 50px;
+background-color: whitesmoke;
+display: flex;
+align-items: center;
+justify-content: center;
+border-top: grey 1px solid; 
+font-size: 18px;
+color:black;
+transition: background-color 0.3s ease-in-out;
+
+}
+
+.dark-mode .footnote {
+background-color: var(--default);
+color: white;
+}
+
+.dark-mode .buttons button {
+background-color: var(--default);
+color: var(--light);
+}
+
+/* Start Over Button */
+#start_over {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: green;
+  color:whitesmoke;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+#game {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 5rem;
+  width: 100%;
+}
+#img{
+display: none;
+margin : 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(4, auto);
+}
+.box {
+  width: 60px;
+  height: 60px;
+  border: 2px solid grey;
+  margin: 1px;
+  color: black;
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  font-family: Arial;
+  font-size: 2.4rem;
+}
+.dark-mode .box {
+  width: 60px;
+  height: 60px;
+  border: 2px solid grey;
+  margin: 1px;
+  color: white;
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  font-family: Arial;
+  font-size: 2.4rem;
+}
+
+.box.empty {
+  background: grey;
+  color: white;
+}
+.box.wrong {
+  background: yellow;
+  color: white;
+}
+.box.right {
+  background: green;
+  color: white;
+}
+.winner-gif {
+  align-items: center;
+}
